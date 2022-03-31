@@ -44,8 +44,7 @@ module.exports = {
         try{
             await Courses.updateOne({_id: req.params.id}, data), 
             res.json({
-                message: "Data has been updated",
-                data: courses
+                message: "Data has been updated"
             })
         }catch(error){
             console.log(error)

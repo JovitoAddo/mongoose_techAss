@@ -38,13 +38,12 @@ module.exports = {
         }
     },
     updateInstructor: async(req, res)=>{
-        const instructor = await Instructor.findById(req.params.id)
+        const instructor = await Instructors.findById(req.params.id)
         const data = req.body
         try{
             await Instructors.updateOne({_id: req.params.id}, data), 
             res.json({
-                message: "Data has been updated",
-                data: instructor
+                message: "Data has been updated"
             })
         }catch(error){
             console.log(error)
