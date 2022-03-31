@@ -4,13 +4,13 @@ const coursesSchema = new mongoose.Schema({
     title:{
         type: String,
         require: true,
-        min : 1,
-        max : 50
+        minLength : 1,
+        maxLength : 50
     },
     description:{
         type: String,
-        min: 1,
-        max: 500,
+        minLength: 1,
+        maxLength: 500,
         required: true
     },
     instructor:{

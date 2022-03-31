@@ -4,8 +4,8 @@ const instructorSchema = new mongoose.Schema({
     name:{
         type: String,
         require: true,
-        min : 1,
-        max : 100
+        minLength : 1,
+        maxLength : 100
     },
     dateOfBirth:{
         type: Date,

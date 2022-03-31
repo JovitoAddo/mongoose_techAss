@@ -4,8 +4,8 @@ const ParticipantsSchema = new mongoose.Schema({
     name:{
         type: String,
         require: true,
-        min : 1,
-        max : 50
+        minLength : 1,
+        maxLength : 50
     },
     dateOfBirth:{
         type: Date,
@@ -13,11 +13,11 @@ const ParticipantsSchema = new mongoose.Schema({
     },
     email:{
         type: String,
-        max: 50
+        maxLength: 50
     },
     phone:{
         type: Number,
-        max: 13
+        maxLength: 13
     },
     courses:[{
         type: mongoose.Types.ObjectId,
