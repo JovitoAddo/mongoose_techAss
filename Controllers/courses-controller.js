@@ -1,13 +1,13 @@
-const {Courses} = require("../Models/courses-model")
+const Courses = require("../Models/courses-model")
 
 module.exports = {
     getAll: async (req,res) =>{
         const courses = await Courses.find({})
-
+        .populate("instructor")
         try{
             res.json({
                 message: "Data Courses",
-                data: Courses
+                data: courses
             })
         } catch(error){
             res.status(400).send(error)
@@ -19,7 +19,7 @@ module.exports = {
         try{
             res.json({
                 message: "Data Courses Menurut ID",
-                data: Courses
+                data: courses
             })
         } catch(error){
             res.status(400).send(error)

@@ -20,7 +20,8 @@ const ParticipantsSchema = new mongoose.Schema({
         max: 13
     },
     courses:[{
-        type: mongoose.Types.ObjectId
+        type: mongoose.Types.ObjectId,
+        ref: "courses"
     }]
 })
 

@@ -15,6 +15,7 @@ const coursesSchema = new mongoose.Schema({
     },
     instructor:{
         type: mongoose.Types.ObjectId,
+        ref: "instructor",
         required: true
     },
     scheduleDateTime:{

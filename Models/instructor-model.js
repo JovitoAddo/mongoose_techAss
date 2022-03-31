@@ -16,5 +16,5 @@ const instructorSchema = new mongoose.Schema({
     }
 })
 
-const Instructor = mongoose.model("instructor", instructorSchema, "instructor")
-module.exports = Instructor
+const Instructors = mongoose.model("instructor", instructorSchema, "instructor")
+module.exports = Instructors

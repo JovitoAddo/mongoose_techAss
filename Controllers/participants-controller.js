@@ -1,9 +1,9 @@
-const {Participants} = require("../Models/participants-model")
+const Participants = require("../Models/participants-model")
 
 module.exports = {
     getAll: async (req,res) =>{
         const participants = await Participants.find({})
-
+        .populate("courses")
         try{
             res.json({
                 message: "Data Participants",
@@ -45,7 +45,7 @@ module.exports = {
             await Participants.updateOne({_id: req.params.id}, data), 
             res.json({
                 message: "Data has been updated",
-                data: instructor
+                data: participants
             })
         }catch(error){
             console.log(error)

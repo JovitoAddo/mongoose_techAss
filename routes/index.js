@@ -6,7 +6,7 @@ const participantsRouter = require("./participants-routes")
 const coursesRouter = require("./courses-routes")
 
 router.get("/", (req, res) => {
-  res.json("selamat datang di mongo atlas");
+  res.json("Pilihan: /instructors, /courses, /participants");
 });
 
 router.use("/instructors", instructorRouter)
